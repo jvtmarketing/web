@@ -3,118 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Local Web Pro | Websites for Trades</title>
+  <title>JVT Marketing | Local Business Web Design</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #1e3a8a;
+      --accent: #2563eb;
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --white: #ffffff;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
     header {
-      background: #1f2937;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+      background: var(--primary);
+      color: var(--white);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+
+    nav a {
+      color: var(--white);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
     }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services, .industries {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .cta {
-      background: #10b981;
-      color: white;
-      padding: 2rem;
+
+    .hero {
+      background: var(--accent);
+      color: var(--white);
       text-align: center;
-      border-radius: 8px;
-      margin-top: 2rem;
+      padding: 4rem 2rem;
     }
-    .cta a {
-      background: white;
-      color: #10b981;
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: var(--white);
+      color: var(--accent);
       padding: 0.8rem 1.5rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 1rem;
-      display: inline-block;
+      transition: 0.3s;
     }
+
+    .btn:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #1f2937;
-      color: white;
+      padding: 2rem;
+      background: var(--primary);
+      color: var(--white);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Local Web Pro</h1>
-    <p>We build simple, effective websites for local businesses.</p>
+    <h1>JVT Marketing</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>What We Do</h2>
-    <div class="services">
+  <section class="hero">
+    <h2>Websites That Win Customers</h2>
+    <p>We build modern, mobile-friendly sites for local businesses.</p>
+    <a href="#contact" class="btn">Get a Free Demo</a>
+  </section>
+
+  <section id="services">
+    <h3>What We Offer</h3>
+    <div class="grid">
       <div class="card">
-        <h3>Custom 1-Page Websites</h3>
-        <p>Clean, mobile-friendly, and designed to get you more calls.</p>
+        <h4>One-Page Sites</h4>
+        <p>Sleek, fast-loading websites to showcase your business and bring in calls.</p>
       </div>
       <div class="card">
-        <h3>Google SEO Setup</h3>
-        <p>We help your business show up when people search your services.</p>
+        <h4>SEO Setup</h4>
+        <p>We help you show up in Google when people search your service.</p>
       </div>
       <div class="card">
-        <h3>Online Booking & Forms</h3>
-        <p>Let people contact or book you right from your website.</p>
+        <h4>Booking & Forms</h4>
+        <p>Get leads directly from your site with forms or calendar booking.</p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Who We Help</h2>
-    <div class="industries">
+  <section id="industries">
+    <h3>Who We Help</h3>
+    <div class="grid">
       <div class="card">Plumbers</div>
+      <div class="card">Roofers</div>
       <div class="card">Electricians</div>
       <div class="card">HVAC</div>
-      <div class="card">Roofers</div>
       <div class="card">Cleaners</div>
       <div class="card">Landscapers</div>
-      <div class="card">Handymen</div>
-      <div class="card">Pet Groomers</div>
     </div>
   </section>
 
-  <section class="cta">
-    <h2>Get a Free Demo Site</h2>
-    <p>We’ll build you a homepage for free. Only pay if you love it.</p>
-    <a href="mailto:your@email.com">Contact Us</a>
+  <section id="contact">
+    <h3>Let’s Build Your Site</h3>
+    <p>Email us to start your free homepage demo. No risk, no pressure.</p>
+    <a href="mailto:your@email.com" class="btn">Contact Us</a>
   </section>
 
   <footer>
-    &copy; 2025 Local Web Pro. All rights reserved.
+    &copy; 2025 JVT Marketing. All rights reserved.
   </footer>
 </body>
 </html>
